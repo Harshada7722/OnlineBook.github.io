@@ -1,0 +1,88 @@
+<html>
+<body>
+<head>
+<style>
+
+body{
+
+background-image:url('b1.jpg');
+background-repeat:no-repeat;
+background-attachment:fixed;
+background-size:100%;
+    }
+</style>
+
+
+<script>
+function test()
+
+{
+confirm("When you click Buy Button your order will be confrim");
+}
+function validation()
+{
+  var a=document.getElementById("t1");
+  var c=document.getElementById("t2");
+  var b=document.getElementById("b1");   
+  var d=document.getElementById("t3");
+  if(a.value!="")
+  {
+    if(c.value!="")
+	{
+	  if(d.value!="")
+	  {
+	    if(g1.checked==true || g2.checked==true)
+		{
+		  if(c2.checked)
+		  {
+		   b.disabled=false;
+		  }
+		}
+	  }
+	}
+  }
+}
+
+</script>
+</head> 
+<form name="myform">
+<h1 style="color:gray"><center>User Information</center></h1><br>
+<b>
+<br>
+<link rel="stylesheet" href="register.html">
+<center>
+First Name <input type="text" id="t1">
+<br><br>
+Last Name <input type="text" id="t2">
+<br><br>
+Email-id
+<input type="text" id="t3">
+<br>
+<br>
+Password <input type="password" id="t4">
+<br><br>
+Gender Male<input type="radio" name="r1" id="g1" "value="M" onchange="validation()">
+Female<input type="radio" name="r1" id="g2" value="F" onchange="validation()">
+<br><br>
+City Name<select name="city" size="1" id="city1">
+<option value="Karad"> Karad</option>
+<option value="Mumbai"> Mumbai</option>
+<option value="satara">satara</option>
+<option value="Nashik"> Nashik</option>
+<option value="sangli">sangli</option>
+<option value="solapur">solapur</option>
+</select>
+<br><br>
+Do you want more information about Book store
+<input type="checkbox" name="c1"id="c2"onchange="validation()"> <br> <br>
+Enter your Feedback<textarea name="tf1" cols="40" rows="5" wrap="soft">
+</textarea>
+<br><br>
+</b>
+<input type="submit" id="b1" value="submit" onclick="test()" disabled>
+<input type="reset" name="b2" value="reset">
+
+</center>
+</form>
+</body>
+</html>
